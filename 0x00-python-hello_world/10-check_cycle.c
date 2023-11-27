@@ -9,26 +9,26 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *slow, *fast;
+	listint_t *kobe, *hare;
 
-	if (list == NULL)
+	if (list == NULL || list->next == NULL)
 	{
 		return (0);
 	}
 
-	slow = list;
-	fast = list->next;
+	kobe = list->next;
+	hare = list->next->next;
 
-	while (slow != fast)
+	while (kobe && hare && hare->next)
 	{
-		if (fast == NULL || fast->next == NULL)
+		if (kobe == hare)
 		{
-			return (0);
+			return (1);
 		}
 
-		slow = slow->next;
-		fast = fast->next;
+		kobe = kobe->next;
+		hare = hare->next->next;
 	}
 
-	return (1);
+	return (0);
 }
