@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
-uppercase = __import__('8-uppercase').uppercase
-
-uppercase("best")
-uppercase("Best School 98 Battery street")
+def uppercase(str):
+    for alph in str:
+        if ord("a") <= ord(alph) <= ord("z"):
+              alph = chr(ord(alph) - 32)
+        print("{:s}".format(alph), end="")
+    print()
