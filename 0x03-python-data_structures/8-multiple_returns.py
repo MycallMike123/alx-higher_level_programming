@@ -5,7 +5,7 @@ def multiple_returns(sentence):
     if str_len > 0:
         letter = sentence[0]
     else:
-        return None
+        return (0, None)
 
     result = str_len, letter
     return result
