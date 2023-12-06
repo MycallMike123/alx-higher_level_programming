@@ -1,4 +1,7 @@
 #include <Python.h>
+#include <bytesobject.h>
+#include <listobject.h>
+#include <object.h>
 
 void print_python_bytes(PyObject *p);
 
