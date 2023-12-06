@@ -7,7 +7,7 @@ void print_python_bytes(PyObject *p);
  * @p: A PyObject list object
  */
 
-void print_python_list(PyObject *p);
+void print_python_list(PyObject *p)
 {
 	int size, mem, a;
 	const char *make;
@@ -36,7 +36,7 @@ void print_python_list(PyObject *p);
  * @p: A PyObject list object
  */
 
-void print_python_bytes(PyObject *p);
+void print_python_bytes(PyObject *p)
 {
 	unsigned char size, a;
 	PyBytesObject *bytes = (PyBytesObject *)p;
