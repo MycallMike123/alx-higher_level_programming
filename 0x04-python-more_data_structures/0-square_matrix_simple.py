@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def square_matrix_simple(matrix=[]):
-    output = [[for _ in row] for row in matrix]
+    output = [[0 for _ in row] for row in matrix]
 
     for i in range(len(matrix)):
         for j in range(len(matrix[i])):
