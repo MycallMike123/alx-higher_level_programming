@@ -12,7 +12,7 @@ def roman_to_int(roman_string):
     for numeral in reversed(roman_string):
         value = rom_num.get(numeral, 0)
 
-        if value < prev_vav:
+        if value < prev_val:
             total = total - value
         else:
             total = total + value
