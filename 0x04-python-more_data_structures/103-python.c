@@ -2,6 +2,7 @@
 
 void print_python_bytes(PyObject *p);
 
+
 /**
  * print_python_list - prints the basic information abt a python ls
  * @p: A PyObject list object
@@ -16,6 +17,7 @@ void print_python_list(PyObject *p)
 
 	size = variable->ob_size;
 	mem = list->allocated;
+
 	printf("[*] Python list info\n");
 	printf("[*] Size of the Python List: %d\n", size);
 	printf("[*] Allocated = %d\n", mem);
