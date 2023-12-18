@@ -10,7 +10,7 @@ def magic_calculation(a, b):
             res += a ** b / i
 
         except ValueError:
-            res += b + a
+            res = b + a
             break
 
     return res
