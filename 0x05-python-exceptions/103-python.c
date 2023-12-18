@@ -28,7 +28,7 @@ void print_python_bytes(PyObject *p)
 	amt = PyBytes_Size(p);
 	printf("  size: %zd\n", amt);
 
-	string = (assert(PyBytes_Check(p)), (((PyBytesObject *)(p))->ob_sval));
+	str = (assert(PyBytes_Check(p)), (((PyBytesObject *)(p))->ob_sval));
 	printf("  trying string: %s\n", str);
 	printf("  first %zd bytes:", amt < 10 ? amt + 1 : 10);
 
@@ -96,6 +96,6 @@ void print_python_float(PyObject *p)
 	}
 
 	amt = ((PyFloatObject *)p)->ob_fval;
-	str = PyOS_double_to_string(value, 'r', 0, Py_DTSF_ADD_DOT_0, NULL);
+	str = PyOS_double_to_string(amt, 'r', 0, Py_DTSF_ADD_DOT_0, NULL);
 	printf("  value: %s\n", str);
 }
