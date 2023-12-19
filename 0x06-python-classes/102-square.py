@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+
 """Module of aClass representing a square."""
+
 
 class Square:
     """Class representing a square."""
