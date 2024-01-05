@@ -1,9 +1,5 @@
 #!/usr/bin/python3
 
 def magic_string():
-    magic = ""
-
-    for a in range(1, 10):
-        magic += "BestSchool" * a + ","
-
-    return magic[:-1]
+    magic_string.n = getattr(magic_string, 'n', 0) + 1
+    return ("BestSchool, " * (magic_string.n - 1) + "BestSchool")
