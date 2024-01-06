@@ -1,0 +1,46 @@
+0-add_integer
+===============
+
+Add Integer Function
+---------------------
+
+Description:
+    This module contains a function called 'add_integer' that adds two integers.
+
+Prototype:
+    def add_integer(a, b=98):
+
+Parameters:
+    - `a` (int or float): The first number.
+    - `b` (int or float): The second number.
+
+Returns:
+    - int: The addition of `a` and `b`.
+
+Raises:
+    - TypeError: If `a` or `b` is not an integer or float.
+
+Usage:
+    Example 1:
+    ```python
+    result = add_integer(3, 7)
+    print(result)  # Output: 9
+    ```
+
+    Example 2:
+    ```python
+    result = add_integer(5.5, 3.5)
+    print(result)  # Output: 8
+    ```
+
+    Example 3:
+    ```python
+    result = add_integer("3", 7)
+    # TypeError: a must be an integer
+    ```
+
+    Example 4:
+    ```python
+    result = add_integer(3, "7")
+    # TypeError: b must be an integer
+    ```
