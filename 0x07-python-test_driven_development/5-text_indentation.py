@@ -6,12 +6,21 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    text = (
-            text.replace(".", ".\n\n")
-            .replace("?", "?\n\n")
-            .replace(":", ":\n\n")
-    )
+    char = 0
 
-    lines = text.split('\n')
-    for line in lines:
-        print(line.strip())
+    while char < len(text) and text[char] == ' ':
+        char += 1
+
+    while char < len(text):
+        print(text[char], end="")
+
+        if text[char] == "\n" or text[char] in ".?:":
+            if text[char] in ".?:":
+                print("\n")
+            char += 1
+
+            while char < len(text) and text[char] == ' ':
+                char += 1
+
+            continue
+        char += 1
