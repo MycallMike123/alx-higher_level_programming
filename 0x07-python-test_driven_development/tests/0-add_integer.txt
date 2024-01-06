@@ -1,8 +1,6 @@
-0-add_integer
-===============
-
-Add Integer Function
----------------------
+=================
+0-add_integer.py
+=================
 
 Description:
     This module contains a function called 'add_integer' that adds two integers.
@@ -10,37 +8,54 @@ Description:
 Prototype:
     def add_integer(a, b=98):
 
-Parameters:
-    - `a` (int or float): The first number.
-    - `b` (int or float): The second number.
+Usage
+=====
 
-Returns:
-    - int: The addition of `a` and `b`.
+::
 
-Raises:
-    - TypeError: If `a` or `b` is not an integer or float.
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(27, 3)
+    30
 
-Usage:
-    Example 1:
-    ```python
-    result = add_integer(3, 7)
-    print(result)  # Output: 9
-    ```
+::
 
-    Example 2:
-    ```python
-    result = add_integer(5.5, 3.5)
-    print(result)  # Output: 8
-    ```
+    >>> add_integer(27, -3)
+    24
 
-    Example 3:
-    ```python
-    result = add_integer("3", 7)
-    # TypeError: a must be an integer
-    ```
+Floats usage
 
-    Example 4:
-    ```python
-    result = add_integer(3, "7")
-    # TypeError: b must be an integer
-    ```
+::
+
+    >>> add_integer(27.5, 2.5)
+    29
+
+Combine floats and non-floats
+
+::
+
+    >>> add_integer(27.3, -28)
+    -1
+
+Non-Numbers
+===========
+
+both arguments are either integers or floats.
+If either argument is a non-integer and non-float, a TypeError is raised:
+
+::
+
+    >>> add_integer("5", 7)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+::
+
+    >>> add_integer(5, "7")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+::
+
+    >>> add_integer(9, None)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
