@@ -1,0 +1,65 @@
+===========================
+100-matrix_mul
+===========================
+
+`matrix_mul` Function
+---------------------
+
+Description:
+    This module contains a function called 'matrix_mul' that performs matrix multiplication
+    on two given matrices.
+
+Prototype:
+    def matrix_mul(m_a, m_b):
+
+Parameters:
+    - `m_a` (list): The first matrix.
+    - `m_b` (list): The second matrix.
+
+Raises:
+    - TypeError: If `m_a` or `m_b` is not a list, not a list of lists, or contains non-numeric elements.
+                 If `m_a` or `m_b` is empty, or their rows are not of the same size.
+    - ValueError: If `m_a` and `m_b` can't be multiplied.
+
+Usage:
+
+::
+
+    >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+    >>> matrix_a = [[1, 2], [3, 4]]
+    >>> matrix_b = [[5, 6], [7, 8]]
+    >>> result = matrix_mul(matrix_a, matrix_b)
+    >>> print(result)
+    [[19, 22], [43, 50]]
+
+if m_a or m_b is not a rectangle (all ‘rows’ should be of the same size): raise a TypeError exception with the message each row of m_a must be of the same size or each row of m_b must be of the same size
+
+::
+
+    >>> m_a = [[1, 2, 3], [4, 5, 6]]
+    >>> m_b = [[7, 8], [9, 10]]
+    >>> result = matrix_mul(m_a, m_b)
+    ValueError: m_a and m_b can't be multiplied
+
+if m_a or m_b is empty (it means: = [] or = [[]]): raise a ValueError exception with the message m_a can't be empty or m_b can't be empty
+
+::
+
+    >>> m_a = []
+    >>> m_b = [[1, 2], [3, 4]]
+    >>> result = matrix_mul(m_a, mat_b)
+    ValueError: m_a can't be empty
+
+::
+
+    >>> m_a = [[1, 2], [3, 'four']]
+    >>> m_b = [[5, 6], [7, 8]]
+    >>> result = matrix_mul(m_a, m_b)
+    TypeError: m_a should contain only integers or floats
+
+::
+
+    >>> m_a = [[1, 2], [3, 4]]
+    >>> m_b = [[5, 6], [7, 8], [9, 10]]
+    >>> result = matrix_mul(m_a, m_b)
+    ValueError: m_a and m_b can't be multiplied
