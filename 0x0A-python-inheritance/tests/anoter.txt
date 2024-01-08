@@ -1,0 +1,111 @@
+==============================
+The ``7-base_geometry`` module
+==============================
+
+Using ``BaseGeometry``
+----------------------
+
+Importing class from the module:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Trying to print the area
+    >>> base_geometry = BaseGeometry()
+    >>> base_geometry.area()
+    Traceback (most recent call last):
+              ...
+    Exception: area() is not implemented
+
+Trying to pass a non-integer argument
+    >>> base_geometry = BaseGeometry()
+    >>> base_geometry.integer_validator("str", "5")
+    Traceback (most recent call last):
+              ...
+    TypeError: str must be an integer
+
+Trying to pass a boolean value
+    >>> base_geometry = BaseGeometry()
+    >>> base_geometry.integer_validator("str", True)
+    Traceback (most recent call last):
+              ...
+    TypeError: str must be an integer
+
+Trying to pass a negative value
+    >>> base_geometry = BaseGeometry()
+    >>> base_geometry.integer_validator("str", -5)
+    Traceback (most recent call last):
+              ...
+    ValueError: str must be greater than 0
+
+Trying to pass a zero value
+    >>> base_geometry = BaseGeometry()
+    >>> base_geometry.integer_validator("str", 0)
+    Traceback (most recent call last):
+              ...
+    ValueError: str must be greater than 0
+
+Passing a positive value
+    >>> base_geometry = BaseGeometry()
+    >>> base_geometry.integer_validator("str", 5)
+
+Passing one argument to integer_validator
+    >>> base_geometry = BaseGeometry()
+    >>> base_geometry.integer_validator("str")
+    Traceback (most recent call last):
+              ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Integer_validator with no arguments
+    >>> base_geometry = BaseGeometry()
+    >>> base_geometry.integer_validator()
+    Traceback (most recent call last):
+              ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'str' and 'value'
+
+Passing three arguments to integer_validator
+    >>> base_geometry = BaseGeometry()
+    >>> base_geometry.integer_validator("str", 1, 2)
+    Traceback (most recent call last):
+              ...
+    TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+Passing one argument to area method
+    >>> base_geometry = BaseGeometry()
+    >>> base_geometry.area(5)
+    Traceback (most recent call last):
+              ...
+    TypeError: area() takes 1 positional argument but 2 were given
+
+Passing two arguments to area method
+    >>> base_geometry = BaseGeometry()
+    >>> base_geometry.area(5, 5)
+    Traceback (most recent call last):
+              ...
+    TypeError: area() takes 1 positional argument but 3 were given
+
+Passing tuple to method
+    >>> base_geometry = BaseGeometry()
+    >>> base_geometry.integer_validator("weight", (4,))
+    Traceback (most recent call last):
+              ...
+    TypeError: weight must be an integer
+
+Passing list to method
+    >>> base_geometry = BaseGeometry()
+    >>> base_geometry.integer_validator("weight", [3])
+    Traceback (most recent call last):
+              ...
+    TypeError: weight must be an integer
+
+Passing dict to method
+    >>> base_geometry = BaseGeometry()
+    >>> base_geometry.integer_validator("weight", {3, 4})
+    Traceback (most recent call last):
+              ...
+    TypeError: weight must be an integer
+
+Passing None to method
+    >>> base_geometry = BaseGeometry()
+    >>> base_geometry.integer_validator("weight", None)
+    Traceback (most recent call last):
+              ...
+    TypeError: weight must be an integer
