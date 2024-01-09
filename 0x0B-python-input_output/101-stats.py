@@ -2,7 +2,6 @@
 """Reads from standard input and computes metrics"""
 
 import sys
-import signal
 
 
 def print_metrics(stats):
