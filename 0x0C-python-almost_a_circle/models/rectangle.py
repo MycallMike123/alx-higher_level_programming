@@ -107,7 +107,7 @@ class Rectangle(Base):
         """Override the default __str__ method"""
 
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - " \
-                f"{self.width}/{self.height}"
+            f"{self.width}/{self.height}"
 
     def update(self, *args, **kwargs):
         """Update the Rectangle.
