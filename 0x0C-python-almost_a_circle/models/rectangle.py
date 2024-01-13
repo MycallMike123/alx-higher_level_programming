@@ -91,7 +91,8 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        """Print the Rectangle using the `#` character."""
+        """Display the rectangle with '#' characters"""
+
         if self.width == 0 or self.height == 0:
             print("")
             return
