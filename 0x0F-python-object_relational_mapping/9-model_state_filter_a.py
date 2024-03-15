@@ -15,10 +15,6 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Ses = sessionmaker(bind=engine)
     ses = Ses()
-    _instances = ses.query(State).filter(State.name == (sys.argv[4],))
 
-    try:
-        print(instances[0].id)
-
-    except IndexError:
-        print("Not found")
+    for _instances in ses.query(State).filter(State.name.like('%a%')):
+        print(_instances.id, _instances.name, sep=": ")
