@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
-"""This script takes in an argument and displays all values in the states table of hbtn_0e_0_usa"""
+"""This script takes in an argument and displays all
+3-my_safe_filter_states values in the states table of hbtn_0e_0_usa"""
 
 import MySQLdb
 import sys
