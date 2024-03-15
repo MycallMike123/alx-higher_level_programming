@@ -17,6 +17,6 @@ if __name__ == "__main__":
     Ses = sessionmaker(bind=engine)
     ses = Ses()
     for _instance in (ses.query(State.name, City.id, City.name)
-                     .filter(State.id == City.state_id)):
+                      .filter(State.id == City.state_id)):
 
         print(_instance[0] + ": (" + str(_instance[1]) + ") " + _instance[2])
