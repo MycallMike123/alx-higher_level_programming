@@ -18,7 +18,7 @@ if __name__ == "__main__":
     _instances = ses.query(State).filter(State.name == (sys.argv[4],))
 
     try:
-        print(instances[0].id)
+        print(_instances[0].id)
 
     except IndexError:
         print("Not found")
