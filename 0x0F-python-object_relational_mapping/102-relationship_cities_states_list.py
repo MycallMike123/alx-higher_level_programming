@@ -19,6 +19,6 @@ if __name__ == "__main__":
     ses = Ses()
 
     for _instance in ses.query(State).order_by(State.id):
-        for city_ins _in _instance.cities:
+        for city_ins in _instance.cities:
             print(city_ins.id, city_ins.name, sep=": ", end="")
             print(" -> " + _instance.name)
