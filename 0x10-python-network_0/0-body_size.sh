@@ -1,4 +1,4 @@
 #!/bin/bash
 # Bash script that takes in a URL
 
-curl -sI "$1" | grep -i Content-Length | awk '{print $2}'
+curl -s "$1" | wc -c
